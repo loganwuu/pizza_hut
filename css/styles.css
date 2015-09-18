@@ -1,3 +1,11 @@
 #show-cost {
     display: none;
 }
+
+.alert {
+    margin-top: 10px;
+}
+
+.btn {
+    margin-top: 5px;
+}

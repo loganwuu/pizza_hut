@@ -29,7 +29,7 @@
                         <br>
 
                         <!-- pizza toppings -->
-                        <label for="new-toppings">Topping(s) ($2 each):</label>
+                        <label for="new-toppings">Toppings ($2 each):</label>
                             <div id="checkbox">
                                 <label><input type="checkbox" name="chk[]" value="Anchovies">Anchovies</label>
                                 <label><input type="checkbox" name="chk[]" value="Beef">Beef</label>
@@ -65,13 +65,15 @@
                 </div>
                     <div class="col-md-4">
                         <div id="show-cost">
-                            <h4 id="price-header">Your total cost is: $<span id="totalCost"></span></h4>
-                            <p>
-                                Pizza Type: <span id="pizzaType"></span><br>
-                                Toppings: <ul id="toppings"></ul>
-                                Size: <span id="size"></span><br>
-                                Quantity: <span id="quantity"></span><br>
-                            </p>
+                            <div class="alert alert-warning">
+                                <h4 id="price-header">Your total cost is: $<span id="totalCost"></span></h4>
+                                <p>
+                                    Pizza Type: <span id="pizzaType"></span><br>
+                                    Toppings: <ul id="toppings"></ul>
+                                    Size: <span id="size"></span><br>
+                                    Quantity: <span id="quantity"></span><br>
+                                </p>
+                            </div>
                         </div>
                     </div>
             </div>
