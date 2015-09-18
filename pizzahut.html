@@ -11,95 +11,123 @@
         <div class="container">
             <h1>Welcome to Pizza Hut</h1>
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <h2>Place your pizza order:</h2>
                     <form id="new-order">
-                        <label for="new-type">Type:</label>
+                        <!-- pizza types -->
+                        <label for="new-type">Type (same price):</label>
                         <select id="new-type" name="new-type">
-                            <option value="Bacon cheese fry">Bacon cheese fry</option>
-                            <option value="BBQ chicken">BBQ chicken</option>
-                            <option value="Chicken bacon ranch">Chicken bacon ranch</option>
-                            <option value="Chicken cordon blue">Chicken cordon blue</option>
+                            <option value="Bacon Cheese Fry">Bacon cheese fry</option>
+                            <option value="BBQ Chicken">BBQ Chicken</option>
+                            <option value="Chicken Bacon Ranch">Chicken Bacon Ranch</option>
+                            <option value="Chicken Cordon Blue">Chicken Cordon Blue</option>
                             <option value="Hawaiian">Hawaiian</option>
-                            <option value="Hot chicken wing">Hot chicken wing</option>
+                            <option value="Hot Chicken Wing">Hot Chicken Wing</option>
                             <option value="Seafood">Seafood</option>
                             <option value="Veggie">Veggie</option>
                         </select>
+                        <br>
 
-                        <label for="new-toppings">Toppigs:</label>
+                        <!-- pizza toppings -->
+                        <label for="new-toppings">Topping(s) ($2 each):</label>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="Anchovies">Anchovies
+                                    <input id="new-topping" type="checkbox" value="Anchovies">Anchovies
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="Beef">Beef
+                                    <input id="new-topping" type="checkbox" value="Beef">Beef
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="Bacon">Bacon
+                                    <input id="new-topping" type="checkbox" value="Bacon">Bacon
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="Chicken">Chicken
+                                    <input id="new-topping" type="checkbox" value="Chicken">Chicken
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="Extra cheese">Extra cheese
+                                    <input id="new-topping" type="checkbox" value="Extra cheese">Extra cheese
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="Ham">Ham
+                                    <input id="new-topping" type="checkbox" value="Ham">Ham
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="Mushrooms">Mushrooms
+                                    <input id="new-topping" type="checkbox" value="Mushrooms">Mushrooms
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="Onions">Onions
+                                    <input id="new-topping" type="checkbox" value="Onions">Onions
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="Pepperoni">Pepperoni
+                                    <input id="new-topping" type="checkbox" value="Pepperoni">Pepperoni
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="Peppers">Peppers
+                                    <input id="new-topping" type="checkbox" value="Peppers">Peppers
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="Pesto">Pesto
+                                    <input id="new-topping" type="checkbox" value="Pesto">Pesto
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="Pineapple">Pineapple
+                                    <input id="new-topping" type="checkbox" value="Pineapple">Pineapple
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="Sausage">Sausage
+                                    <input id="new-topping" type="checkbox" value="Sausage">Sausage
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="Spinach">Spinach
+                                    <input id="new-topping" type="checkbox" value="Spinach">Spinach
                                 </label>
                             </div>
 
+                            <!-- pizza sizes -->
+                            <label for="new-size">Size:</label>
+                            <select id="new-size" name="new-size">
+                                <option value="s">small ($5)</option>
+                                <option value="m" selected>medium ($10)</option>
+                                <option value="l">large ($15)</option>
+                            </select>
+
+                            <!-- pizza quantity -->
+                            <label for="new-quantity">Quantity:</label>
+                            <input id="new-quantity" type="number" placeholder="1" min="1" max="100" required>
+
+                            <!-- submit button -->
+                            <button type="submit" class="btn btn-danger btn-block">Calculate total cost</button>
                     </form>
                 </div>
+                    <div class="col-md-4">
+                        <div id="show-cost">
+                            <h4 id="price-header">Your total cost is: $<span id="totalCost"></span></h4>
+                            <p>
+                                Pizza Type: <span id="pizzaType"></span><br>
+                                Toppings: <ul id="toppings"></ul>
+                                Size: <span id="size"></span><br>
+                                Quantity: <span id="quantity"></span><br>
+                            </p>
+                        </div>
+                    </div>
             </div>
         </div>
     </body>

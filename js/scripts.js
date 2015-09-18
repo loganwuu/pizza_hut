@@ -8,32 +8,47 @@ function PizzaOrder(type, toppings, size, quantity) {
 PizzaOrder.prototype.totalCost = function() {
     var cost = 0;
     if (this.size === "s") {
-        cost = (this.toppings.length * 2) + 5;
+        cost = (this.toppings * 2) + 5;
     } else if (this.size === "m") {
-        cost = (this.toppings.length * 2) + 10;
+        cost = (this.toppings * 2) + 10;
     } else if (this.size === "l") {
-        cost = (this.toppings.length * 2) + 15;
+        cost = (this.toppings * 2) + 15;
     }
     var totalCost = cost * this.quantity;
     return totalCost;
 }
 
+function resetFields() {
+    $(".checkbox").val('checked', false);
+    $("input#new-quantity").val("");
+}
 
+$(document).ready(function() {
+    $("form#new-order").submit(function(event) {
+        event.preventDefault();
 
-// $(document).ready(function() {
-//     $("form#new-ticket").submit(function(event) {
-//         event.preventDefault();
-//
-//         var inputtedTitle = $("select#new-title").val();
-//         var inputtedShowTime = $("select#new-show-time").val();
-//         var inputtedAge = parseInt($("input#new-age").val());
-//         var inputtedShowDate = $("input#new-show-date").val();
-//
-//         var newTicket = new Ticket(inputtedTitle, inputtedShowTime, inputtedAge, inputtedShowDate);
-//
-//         var price = newTicket.calculatePrice();
-//
-//         $("h4#price-header").show();
-//         $("span#price").text(price);
-//     });
-// });
+        var inputtedType = $("select#new-type").val();
+        var inputtedToppings = parseInt(($('.checkbox').prop('checked', true)).length);
+        console.log($('.checkbox').prop('checked', true).length);
+        console.log(inputtedToppings);
+        var inputtedSize = $("select#new-size").val();
+        var inputtedQuantity = parseInt($("input#new-quantity").val());
+
+        var newOrder = new PizzaOrder(inputtedType, inputtedToppings, inputtedSize, inputtedQuantity);
+
+        var totalCost = newOrder.totalCost();
+
+        console.log(totalCost);
+
+        $("#show-cost").show();
+        $("span#totalCost").text(totalCost);
+        $("span#pizzaType").text(inputtedType);
+        // inputtedToppings.forEach(function(topping) {
+        //     $("ul#toppings").append("<li>" + topping + "</li>");
+        // });
+        $("span#size").text(inputtedSize);
+        $("span#quantity").text(inputtedQuantity);
+
+        resetFields();
+    });
+});
