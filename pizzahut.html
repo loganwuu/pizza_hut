@@ -30,83 +30,29 @@
 
                         <!-- pizza toppings -->
                         <label for="new-toppings">Topping(s) ($2 each):</label>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="new-topping" type="checkbox" value="Anchovies">Anchovies
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="new-topping" type="checkbox" value="Beef">Beef
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="new-topping" type="checkbox" value="Bacon">Bacon
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="new-topping" type="checkbox" value="Chicken">Chicken
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="new-topping" type="checkbox" value="Extra cheese">Extra cheese
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="new-topping" type="checkbox" value="Ham">Ham
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="new-topping" type="checkbox" value="Mushrooms">Mushrooms
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="new-topping" type="checkbox" value="Onions">Onions
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="new-topping" type="checkbox" value="Pepperoni">Pepperoni
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="new-topping" type="checkbox" value="Peppers">Peppers
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="new-topping" type="checkbox" value="Pesto">Pesto
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="new-topping" type="checkbox" value="Pineapple">Pineapple
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="new-topping" type="checkbox" value="Sausage">Sausage
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="new-topping" type="checkbox" value="Spinach">Spinach
-                                </label>
+                            <div id="checkbox">
+                                <label><input type="checkbox" name="chk[]" value="Anchovies">Anchovies</label>
+                                <label><input type="checkbox" name="chk[]" value="Beef">Beef</label>
+                                <label><input type="checkbox" name="chk[]" value="Bacon">Bacon</label>
+                                <label><input type="checkbox" name="chk[]" value="Chicken">Chicken</label>
+                                <label><input type="checkbox" name="chk[]" value="Extra cheese">Extra cheese</label>
+                                <label><input type="checkbox" name="chk[]" value="Ham">Ham</label>
+                                <label><input type="checkbox" name="chk[]" value="Mushrooms">Mushrooms</label>
+                                <label><input type="checkbox" name="chk[]" value="Onions">Onions</label>
+                                <label><input type="checkbox" name="chk[]" value="Pepperoni">Pepperoni</label>
+                                <label><input type="checkbox" name="chk[]" value="Peppers">Peppers</label>
+                                <label><input type="checkbox" name="chk[]" value="Pesto">Pesto</label>
+                                <label><input type="checkbox" name="chk[]" value="Pineapple">Pineapple</label>
+                                <label><input type="checkbox" name="chk[]" value="Sausage">Sausage</label>
+                                <label><input type="checkbox" name="chk[]" value="Spinach">Spinach</label>
                             </div>
 
                             <!-- pizza sizes -->
                             <label for="new-size">Size:</label>
                             <select id="new-size" name="new-size">
-                                <option value="s">small ($5)</option>
-                                <option value="m" selected>medium ($10)</option>
-                                <option value="l">large ($15)</option>
+                                <option value="small">small ($5)</option>
+                                <option value="medium" selected>medium ($10)</option>
+                                <option value="large">large ($15)</option>
                             </select>
 
                             <!-- pizza quantity -->

@@ -18,27 +18,27 @@ describe('PizzaOrder', function() {
 
 describe('totalCost', function() {
     it("caculates the price for a small pizza with one topping", function() {
-        var testOrder = new PizzaOrder("testType", 1, "s", 1);
+        var testOrder = new PizzaOrder("testType", 1, "small", 1);
         expect(testOrder.totalCost()).to.equal(7);
     });
 
     it("caculates the price for a medium pizza with one topping", function() {
-        var testOrder = new PizzaOrder("testType", 1, "m", 1);
+        var testOrder = new PizzaOrder("testType", 1, "medium", 1);
         expect(testOrder.totalCost()).to.equal(12);
     });
 
     it("caculates the price for a large pizza with one topping", function() {
-        var testOrder = new PizzaOrder("testType", 1, "l", 1);
+        var testOrder = new PizzaOrder("testType", 1, "large", 1);
         expect(testOrder.totalCost()).to.equal(17);
     });
 
     it("caculates the price for two small pizza with one topping", function() {
-        var testOrder = new PizzaOrder("testType", 1, "s", 2);
+        var testOrder = new PizzaOrder("testType", 1, "small", 2);
         expect(testOrder.totalCost()).to.equal(14);
     });
 
     it("caculates the price for two small pizzas each with two toppings", function() {
-        var testOrder = new PizzaOrder("testType", 2, "s", 2);
+        var testOrder = new PizzaOrder("testType", 2, "small", 2);
         expect(testOrder.totalCost()).to.equal(18);
     });
 });

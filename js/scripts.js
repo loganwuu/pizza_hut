@@ -7,11 +7,11 @@ function PizzaOrder(type, toppings, size, quantity) {
 
 PizzaOrder.prototype.totalCost = function() {
     var cost = 0;
-    if (this.size === "s") {
+    if (this.size === "small") {
         cost = (this.toppings * 2) + 5;
-    } else if (this.size === "m") {
+    } else if (this.size === "medium") {
         cost = (this.toppings * 2) + 10;
-    } else if (this.size === "l") {
+    } else if (this.size === "large") {
         cost = (this.toppings * 2) + 15;
     }
     var totalCost = cost * this.quantity;
@@ -19,7 +19,8 @@ PizzaOrder.prototype.totalCost = function() {
 }
 
 function resetFields() {
-    $(".checkbox").val('checked', false);
+    //empty checked boxes after each submission
+    $("#checkbox input:checkbox").removeAttr('checked');
     $("input#new-quantity").val("");
 }
 
@@ -28,9 +29,9 @@ $(document).ready(function() {
         event.preventDefault();
 
         var inputtedType = $("select#new-type").val();
-        var inputtedToppings = parseInt(($('.checkbox').prop('checked', true)).length);
-        console.log($('.checkbox').prop('checked', true).length);
-        console.log(inputtedToppings);
+        var inputtedToppings = $('#checkbox :checkbox:checked').length;
+        // console.log($('#checkbox :checkbox:checked').length);
+        // console.log(inputtedToppings);
         var inputtedSize = $("select#new-size").val();
         var inputtedQuantity = parseInt($("input#new-quantity").val());
 
@@ -43,7 +44,7 @@ $(document).ready(function() {
         $("#show-cost").show();
         $("span#totalCost").text(totalCost);
         $("span#pizzaType").text(inputtedType);
-        // inputtedToppings.forEach(function(topping) {
+        // $("#checkbox").forEach(function(topping) {
         //     $("ul#toppings").append("<li>" + topping + "</li>");
         // });
         $("span#size").text(inputtedSize);
