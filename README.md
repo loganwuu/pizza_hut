@@ -6,7 +6,7 @@
 
 ## Description
 
-The web app is built by creating the object ```pizzaOrder``` with ```type```, ```toppings```, ```size```, ```quantity``` properties. ```pizzaOrder.prototype.totalCost``` method is created to output the final cost of the order. BDD process was implemented throughout the project.
+The web app is built by creating the object ```pizzaOrder``` with ```type```, ```toppings```, ```size```, and ```quantity``` properties. ```pizzaOrder.prototype.totalCost``` method is created to output the final cost of the order. BDD process was implemented throughout the project.
 
 ## Setup
 
