@@ -34,12 +34,12 @@ function resetFields() {
 }
 
 $(document).ready(function() {
-    //does not empty the list after new submission
-    $("ul#toppings").val("");
-
     $("form#new-order").submit(function(event) {
         event.preventDefault();
-
+        
+        //empty the list after each new submission
+        $("ul#toppings").text("");
+    
         //get all inputs from form submission and create new object called newOrder
         var inputtedType = $("select#new-type").val();
         var inputtedToppings = $('#checkbox :checkbox:checked').length;
